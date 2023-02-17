@@ -11,7 +11,7 @@ int main(void)
 	for (god = 'a'; god <= 'z'; god++)
 	{
 		if (god != 'e' && god != 'q')
-		putchar(god);
+			putchar(god);
 	}
 	return (0);
 }
