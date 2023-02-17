@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /*
- * main - print a line of code using puts
- * puts - prints my output
+ * main - Entry point 
+ * 
+ * Description: line of code that prints uding puts
+ *
  * Return: 0
 */
 
