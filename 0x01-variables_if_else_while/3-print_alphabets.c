@@ -11,7 +11,7 @@ int main(void)
 	for (god = 'a'; god <= 'z'; god++)
 		putchar(god);
 
-	for (god = 'A'; god <= 'A'; god++)
+	for (god = 'A'; god <= 'Z'; god++)
 		putchar(god);
 
 	putchar('\n');
