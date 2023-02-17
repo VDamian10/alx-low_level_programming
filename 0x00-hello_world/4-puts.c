@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
- * main - Entry point 
- * 
+/**
+ * main - Entry point
+ *
  * Description: line of code that prints uding puts
  *
  * Return: 0
