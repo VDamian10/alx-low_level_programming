@@ -2,7 +2,7 @@
 
 /*
  * main - print a line of code using puts
- *
+ * puts - prints my output
  * Return: 0
 */
 
