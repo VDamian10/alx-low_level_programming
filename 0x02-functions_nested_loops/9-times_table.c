@@ -9,24 +9,36 @@
 */
 void times_table(void)
 {
-	int number, times, result;
+	int num1, num2, answer;
+	double tens, units;
 
-	for (number = 0; number <= 9; number++)
+	answer = num1 * num2;
+	tens = answer / 10;
+	units = answer % 10;
+
+	for (num1 = 0; num1 <= 9; num1++)
 	{
-		_putchar('0');
-		for (times = 1; times <= 9; times++)
+
+		for (num2 = 0; num2 <= 9; num2++)
 		{
-			_putchar(',');
-			_putchar(' ');
+			if (num2 == 0)
+				_putchar('0');
 
-			result = number * times;
-
-			if (result <= 9)
+			else if (answer < 10)
+			{
+				_putchar(',');
 				_putchar(' ');
-
+				_putchar(' ');
+				_putchar(units);
+			}
 			else
-				_putchar((result / 10) + '0');
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(tens);
+				_putchar(units);
+			}
 		}
-		_putchar((result % 10) + '0');
+	_putchar('\n');
 	}
 }
