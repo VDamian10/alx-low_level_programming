@@ -19,13 +19,13 @@ void print_times_table(int n)
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar(44);
+				_putchar(32);
 
 				answer = num1 * num2;
 
 				if (answer <= 9)
-					_putchar(' ');
+					_putchar(32);
 
 				if (answer >= 10 && answer <= 99)
 				{
