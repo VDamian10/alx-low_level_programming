@@ -7,15 +7,21 @@
 */
 void more_numbers(void)
 {
-	int n, tens, units;
+	int n, tens, units, v;
 
-	for (n = 0; n <= 14; n++)
+	for (n = 0; n <= 10; n++)
 	{
-		if (n >= 10)
+		for (v = 0; v <= 14; v++)
 		{
-			_putchar('1');
+			tens = v / 10;
+			units = v % 10;
+
+			if (v >= 10)
+			{
+				_putchar(tens + '0');
+			}
+			_putchar(units + '0');
 		}
-		_putchar((n % 10) + '0');
 	}
 	_putchar('\n');
 }
