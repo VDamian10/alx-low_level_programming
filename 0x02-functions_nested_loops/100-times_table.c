@@ -33,9 +33,10 @@ void print_times_table(int n)
 				}
 				else
 				{
+					_putchar((answer / 100) + '0');
 					_putchar((answer % 100) + '0');
-					_putchar((answer / 10) + '0');
 				}
+				_putchar((answer % 10) + '0');
 			}
 			_putchar('\n');
 		}
