@@ -11,17 +11,18 @@ void print_times_table(int n)
 {
 	int num1, num2, answer;
 
-	if (n > 15 || n < 0)
+	if (n <= 15 && n >= 0)
 	{
 		for (num1 = 0; num1 <= n; num1++)
 		{
 			_putchar('0');
-			_putchar(',');
-			_putchar(' ');
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
 				answer = num1 * num2;
+
+				_putchar(',');
+				_putchar(' ');
 
 				if (answer < 9)
 				{
