@@ -24,6 +24,9 @@ void print_times_table(int n)
 
 				answer = num1 * num2;
 
+				if (answer <= 9 || answer <= 99)
+					_putchar(' ');
+
 				if (answer < 9)
 					_putchar(' ');
 
