@@ -24,17 +24,14 @@ void print_times_table(int n)
 
 				answer = num1 * num2;
 
-				if (answer <= 9 || answer <= 99)
+				if (answer <= 9)
 					_putchar(' ');
 
-				if (answer < 9)
-					_putchar(' ');
-
-				else if (answer >= 10 && answer <= 99)
+				if (answer >= 10 && answer <= 99)
 				{
 					_putchar((answer / 10) + '0');
 				}
-				else
+				else if (answer >= 100)
 				{
 					_putchar((answer / 100) + '0');
 					_putchar(((answer / 10) % 10) + '0');
