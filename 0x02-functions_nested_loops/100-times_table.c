@@ -16,6 +16,8 @@ void print_times_table(int n)
 		for (num1 = 0; num1 <= n; num1++)
 		{
 			_putchar('0');
+			_putchar(',');
+			_putchar(' ');
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
@@ -29,13 +31,10 @@ void print_times_table(int n)
 
 				if (answer >= 10 && answer <= 99)
 				{
-					_putchar(' ');
 					_putchar((answer / 10) + '0');
 				}
 				else if (answer >= 100)
 				{
-					_putchar(' ');
-					_putchar(' ');
 					_putchar((answer / 100) + '0');
 					_putchar(((answer / 10) % 10) + '0');
 				}
