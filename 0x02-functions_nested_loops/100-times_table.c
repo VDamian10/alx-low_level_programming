@@ -24,9 +24,9 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 
-				if (answer < 9)
+				if (answer <= 9 || answer <= 99)
 				{
-					_putchar(answer + '0');
+					_putchar(' ');
 				}
 
 				else if (answer >= 10 && answer <= 99)
