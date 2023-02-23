@@ -16,18 +16,14 @@ void print_times_table(int n)
 		for (num1 = 0; num1 <= n; num1++)
 		{
 			_putchar('0');
-			_putchar(',');
-			_putchar(' ');
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
 
 				answer = num1 * num2;
-
-				if (answer < 10 && answer > 0)
-					_putchar(' ');
 
 				if (answer >= 10 && answer <= 99)
 				{
