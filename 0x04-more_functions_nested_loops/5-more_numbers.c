@@ -11,7 +11,7 @@ void more_numbers(void)
 
 	for (n = 0; n < 10; n++)
 	{
-		for (v = 0; v < 14; v++)
+		for (v = 0; v < 15; v++)
 		{
 			tens = v / 10;
 			units = v % 10;
