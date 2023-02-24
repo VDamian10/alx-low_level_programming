@@ -1,34 +1,43 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * main - entry point
  *
  * FizzBuzz project
  *
- * Return: 0
+ * Return: void
 */
 int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	while (i < 100)
 	{
-		if (i % 15 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
+		{
 			printf("FizzBuzz");
+		}
 
 		else if (i % 3 == 0)
+		{
 			printf("Fizz");
+		}
 
 		else if (i % 5 == 0)
+		{
 			printf("Buzz");
+		}
 
 		else
-			printf("%i", i);
+		{
+			printf("%d", i);
+		}
 
-		if (i < 100)
-			printf(" ");
+		if (i != 100)
+		{
+			putchar(32);
+		}
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
-
 }
