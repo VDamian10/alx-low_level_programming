@@ -12,7 +12,7 @@ int main(void)
 	num = 612852475143;
 	fac = 1;
 
-	for (i = 2; i <= num / 1; i++)
+	for (i = 2; i <= num / i; i++)
 	{
 		while (num % i == 0)
 		{
