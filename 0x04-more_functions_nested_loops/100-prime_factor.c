@@ -17,7 +17,7 @@ int main(void)
 		while (num % i == 0)
 		{
 			fac = i;
-			num != i;
+			num /= i;
 		}
 	}
 
