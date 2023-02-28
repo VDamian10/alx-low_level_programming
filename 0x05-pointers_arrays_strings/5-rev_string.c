@@ -7,26 +7,26 @@
 */
 void rev_string(char *s)
 {
-	int i, j;
+	int strel, slength, revorder;
 
-	i = 0;
-	while (s[i] != '\0')
+	strel = 0;
+	while (s[strel] != '\0')
 	{
-		_putchar(s[i]);
-		i++;
+		_putchar(s[strel]);
+		strel++;
 	}
 
-	j = 0;
+	slength = 0;
 
 	while (*s != '\0')
 	{
-		j++;
 		s++;
+		slength++;
 	}
 
-	for (j = j - 1; s[j] != '\0' && s[j] >= 0; j--)
+	for (revorder = slength - 1; revorder >= 0; revorder--)
 	{
-		_putchar(s[j]);
+		_putchar(revorder);
 	}
 
 }
