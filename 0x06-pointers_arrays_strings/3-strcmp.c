@@ -4,6 +4,8 @@
  * @s1: first string
  * @s2: second string
  *
+ * This program compares two strings
+ *
  * Return: 0
 */
 int _strcmp(char *s1, char *s2)
