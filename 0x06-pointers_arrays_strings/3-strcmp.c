@@ -12,9 +12,11 @@ int _strcmp(char *s1, char *s2)
 {
 	int o;
 
-	for (o = 0; s1[o] == s2[o]; o++)
+	o = 0;
+
+	while (s1[o] == s2[o])
 	{
-		continue;
+		o++;
 	}
 
 	if (s1[o] == '\0')
