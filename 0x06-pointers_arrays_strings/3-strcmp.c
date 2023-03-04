@@ -14,11 +14,13 @@ int _strcmp(char *s1, char *s2)
 
 	for (o = 0; s1[o] == s2[o]; o++)
 	{
-		if (s1[o] == '\0')
-		{
-			return (0);
-		}
-
-		return (s1[o] - s2[o]);
+		continue;
 	}
+
+	if (s1[o] == '\0')
+	{
+		return (0);
+	}
+
+	return (s1[o] - s2[o]);
 }
