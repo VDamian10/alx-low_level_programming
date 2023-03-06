@@ -15,7 +15,7 @@ void reverse_array(int *a, int n)
 		a[o] = a[l - 1];
 		a[l - 1] = tmp;
 
-		if (o = l)
+		if (o == l)
 		{
 			break;
 		}
