@@ -10,6 +10,8 @@
 char *cap_string(char *str)
 {
 	int o = 0;
+	char no[] = {" \t\n,;.!?\"(){}"};
+	int v;
 
 	while (str[o] != '\0')
 	{
@@ -22,9 +24,12 @@ char *cap_string(char *str)
 			}
 		}
 
-		if (str[o] == ' ')
+		for (v = 0; no[v] != '\0'; v++)
 		{
-			o++;
+			if (str[o] == no[v])
+			{
+				o++;
+			}
 
 			if (str[o] <= 'z' && str[o] >= 'a')
 			{
@@ -32,13 +37,13 @@ char *cap_string(char *str)
 				continue;
 			}
 		}
-
-		else
-			if (str[o] <= 'Z' && str[o] >= 'A')
-			{
-				str[o] += 32;
-			}
-
+/*
+*		else
+*			if (str[o] <= 'Z' && str[o] >= 'A')
+*			{
+*				str[o] += 32;
+*			}
+*/
 		o++;
 	}
 
