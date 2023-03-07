@@ -20,24 +20,20 @@ char *cap_string(char *str)
 			if (str[o] <= 'z' && str[o] >= 'a')
 			{
 				str[o] -= 32;
-				continue;
 			}
 		}
 
-		v = 0;
-
-		while (no[v] != '\0')
+		for (v = 0; v <= 12; v++)
 		{
 			if (str[o] == no[v])
 			{
-				continue;
+				o++;
 			}
-		}
 
-		if (str[o] <= 'z' && str[o] >= 'a')
-		{
-			str[o] -= 32;
-			continue;
+			if (str[o] <= 'z' && str[o] >= 'a')
+			{
+				str[o] -= 32;
+			}
 		}
 
 		o++;
