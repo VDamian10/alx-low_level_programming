@@ -24,26 +24,22 @@ char *cap_string(char *str)
 			}
 		}
 
-		for (v = 0; no[v] != '\0'; v++)
+		v = 0;
+
+		while (no[v] != '\0')
 		{
 			if (str[o] == no[v])
 			{
-				o++;
-			}
-
-			if (str[o] <= 'z' && str[o] >= 'a')
-			{
-				str[o] -= 32;
 				continue;
 			}
 		}
-/*
-*		else
-*			if (str[o] <= 'Z' && str[o] >= 'A')
-*			{
-*				str[o] += 32;
-*			}
-*/
+
+		if (str[o] <= 'z' && str[o] >= 'a')
+		{
+			str[o] -= 32;
+			continue;
+		}
+
 		o++;
 	}
 
