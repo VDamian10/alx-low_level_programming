@@ -28,11 +28,11 @@ char *cap_string(char *str)
 			if (str[o] == no[v])
 			{
 				o++;
-			}
 
-			if (str[o] <= 'z' && str[o] >= 'a')
-			{
-				str[o] -= 32;
+				if (str[o] <= 'z' && str[o] >= 'a')
+				{
+					str[o] -= 32;
+				}
 			}
 		}
 
