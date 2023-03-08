@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[v] == *o)
 		{
-			return (o);
+			return (s);
 		}
 
 		else
