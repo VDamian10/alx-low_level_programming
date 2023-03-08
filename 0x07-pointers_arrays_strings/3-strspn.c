@@ -20,6 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[v] == accept[u])
 			{
 				len++;
+				break;
 			}
 		}
 
