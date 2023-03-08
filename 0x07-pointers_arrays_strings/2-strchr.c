@@ -10,24 +10,24 @@
 */
 char *_strchr(char *s, char c)
 {
-	char *o;
 	int v;
 
-	o = &c;
 	v = 0;
 
 	while (s[v] != '\0')
 	{
-		if (s[v] == *o)
+		if (s[v] == c)
 		{
 			return (s);
 		}
 
-		else
-		{
-			return ('\0');
-		}
-
 		v++;
 	}
+/*
+*	if (c == '\0')
+*	{
+*		return (s);
+*	}
+*/
+	return ('\0');
 }
