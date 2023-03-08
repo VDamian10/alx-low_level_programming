@@ -10,9 +10,7 @@
 */
 char *_strchr(char *s, char c)
 {
-	int v;
-
-	v = 0;
+	int v = 0;
 
 	while (s[v] != '\0')
 	{
@@ -22,6 +20,7 @@ char *_strchr(char *s, char c)
 		}
 
 		v++;
+		s++;
 	}
 
 	if (c == '\0')
