@@ -20,7 +20,7 @@ int check(int sn, int o)
 		return (-1);
 	}
 
-	return (check(o + 1, sn));
+	return (check(sn, o + 1));
 }
 
 
