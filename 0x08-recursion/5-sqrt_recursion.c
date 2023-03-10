@@ -15,7 +15,7 @@ int check(int sn, int o)
 		return (o);
 	}
 
-	else if ((o * o) < sn)
+	else if ((o * o) > sn)
 	{
 		return (-1);
 	}
