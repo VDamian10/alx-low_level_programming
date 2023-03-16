@@ -9,11 +9,6 @@
 */
 int main(int argc, char *argv[])
 {
-	if (*argv[argc] != '\0')
-	{
-		printf("%s\n", argv[argc]);
-		argc++;
-	}
-
+	printf("%s\n", argv[argc * 0]);
 	return (0);
 }
