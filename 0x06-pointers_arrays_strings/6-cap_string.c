@@ -9,9 +9,8 @@
 */
 char *cap_string(char *str)
 {
-	int o = 0;
+	int o = 0, v = 0;
 	char no[] = {" \t\n,;.!?\"(){}"};
-	int v;
 
 	while (str[o] != '\0')
 	{
@@ -23,7 +22,7 @@ char *cap_string(char *str)
 			}
 		}
 
-		for (v = 0; v <= 12; v++)
+		for (v = 0; v < 14; v++)
 		{
 			if (str[o] == no[v])
 			{
