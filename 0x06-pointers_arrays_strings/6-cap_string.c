@@ -22,11 +22,14 @@ char *cap_string(char *str)
 			}
 		}
 
-		for (v = 0; v < 14; v++)
+		else
 		{
-			if (str[o] == no[v])
+			for (v = 0; v < 14; v++)
 			{
-				o++;
+				if (str[o] == no[v])
+				{
+					o++;
+				}
 
 				if (str[o] <= 'z' && str[o] >= 'a')
 				{
