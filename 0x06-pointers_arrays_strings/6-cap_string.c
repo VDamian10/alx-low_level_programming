@@ -10,7 +10,7 @@
 char *cap_string(char *str)
 {
 	int o = 0, v = 0;
-	char no[] = {" \t\n,;.!?\"(){}"};
+	char no[] = " \t\n,;.!?\"(){}";
 
 	while (str[o] != '\0')
 	{
