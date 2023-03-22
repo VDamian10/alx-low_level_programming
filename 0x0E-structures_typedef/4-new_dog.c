@@ -90,5 +90,6 @@ char str_cpy(char *a, char *b)
 	}
 
 	b[i] = '\0';
+	return (*b);
 }
 
