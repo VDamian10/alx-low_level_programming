@@ -33,35 +33,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	else
 	{
-		free(d->name);
-		return (NULL);
-	}
-
-	if (age != 0)
-	{
-		d->age = age;
-	}
-
-	else
-	{
-		d->age = 0;
+		free(d);
 		return (NULL);
 	}
 
 	if (owner != NULL)
 	{
 		d->owner = malloc(sizeof(char) * (str_len(owner) + 1));
-		d->owner = owner;
 		str_cpy(owner, d->owner);
 	}
 
 	else
 	{
-		free(d->owner);
+		free(d->name);
 		free(d);
 		return (NULL);
 	}
 
+	d->age = age;
+	
 	return (d);
 }
 
