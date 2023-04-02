@@ -8,12 +8,12 @@
 size_t list_len(const list_t *h)
 {
 	size_t j = 0;
-
-	if (h == NULL)
-	{
-		printf("[0] (nil)\n");
-	}
-
+/*
+*	if (h == NULL)
+*	{
+*		printf("[0] (nil)\n");
+*	}
+*/
 	while (h != NULL)
 	{
 		h = h->next;
