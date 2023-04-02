@@ -24,11 +24,13 @@ void rev_string(char *s)
 		slength++;
 	}
 
+	slength += 1;
+
 	revorder = slength - 1;
 
 	while (revorder >= 0)
 	{
-		_putchar(revorder);
+		_putchar(s[revorder]);
 		revorder--;
 	}
 
