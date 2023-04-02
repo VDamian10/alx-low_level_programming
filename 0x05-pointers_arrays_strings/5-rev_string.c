@@ -7,15 +7,15 @@
 */
 void rev_string(char *s)
 {
-	int strel, slength, revorder;
-
-	strel = 0;
-	while (s[strel] != '\0')
-	{
-		_putchar(s[strel]);
-		strel++;
-	}
-
+	int slength, revorder;
+/*
+*	strel = 0;
+*	while (s[strel] != '\0')
+*	{
+*		_putchar(s[strel]);
+*		strel++;
+*	}
+*/
 	slength = 0;
 
 	while (*s != '\0')
