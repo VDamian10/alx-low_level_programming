@@ -1,5 +1,21 @@
 #include "lists.h"
-unsigned int strlength(const char *str);
+
+/**
+ * strlength - calculates string length
+ * @str: string
+ * Return: length
+*/
+unsigned int strlength(const char *str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 /**
  * add_node_end - adds a new node to the end
