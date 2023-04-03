@@ -1,4 +1,5 @@
 #include "lists.h"
+unsigned int strlength(const char *str);
 
 /**
  * add_node_end - adds a new node to the end
