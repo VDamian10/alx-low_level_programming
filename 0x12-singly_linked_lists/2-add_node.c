@@ -25,21 +25,31 @@ unsigned int strlength(const char *str)
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *newnode = malloc(sizeof(list_t));
+	list_t *newnode;
 
-	if (newnode == NULL)
+	if (!head)
+		return (NULL);
+
+	newnode = malloc(sizeof(list_t));
+
+	if (!newnode)
 	{
-		printf("Error\n");
 		return (NULL);
 	}
 
 	newnode->str = strdup(str);
-	newnode->len = strlength(newnode->str);
-	newnode->next = *head;
 
+	if (!newnode->str)
+	{
+		free(newnode);
+		return (NULL);
+	}
+
+	newnode->len = strlength(newnode->str);
+
+
+	newnode->next = *head;
 	*head = newnode;
 
-	free(newnode->str);
-	free(newnode);
-	return (*head);
+	return (newnode);
 }
