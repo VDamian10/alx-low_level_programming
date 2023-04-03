@@ -19,6 +19,23 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
+/**
+ * strlength - calculates string length
+ * @str: string
+ * Return: length
+*/
+unsigned int strlength(const char *str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+};
+
 int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
