@@ -16,10 +16,10 @@ void free_listint(listint_t *head)
 
 	freeme = head;
 
-	while (freeme->next)
+	while (freeme)
 	{
-		head = head->next;
 		free(freeme);
+		freeme = freeme->next;
 	}
 
 }
