@@ -1,1 +1,3 @@
-We go again with hard things in scripts
+This is my ALX Journey
+
+Month 01 - remastering my code 
