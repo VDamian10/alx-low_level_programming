@@ -15,14 +15,22 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] < '0' || s[i] > '9')
-		{
-			if (s[i] == '-')
-				min *= -1;
-		}
+//		if (s[i] < '0' || s[i] > '9')
+//		{
+		if (s[i] == '-')
+			min *= -1;
+//		}
 
 		if (s[i] >= '0' && s[i] <= '9')
-			num = num * 10 + (s[i] - '0');
+		{
+			while (s[i] >= '0' && s[i] <= '9')
+			{
+				num = num * 10 + (s[i] - '0');
+				i++;
+			}
+
+			break;
+		}
 	}
 
 	return (num * min);
