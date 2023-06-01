@@ -10,10 +10,10 @@
 
 int _atoi(char *s)
 {
-	int min = 1;
+	int i, min = 1;
 	unsigned int num = 0;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] < '0' || s[i] > '9')
 		{
