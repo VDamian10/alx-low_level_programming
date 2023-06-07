@@ -5,25 +5,28 @@
  * @n: number to check
  * Return: 1 if prime or 0 otherwise
 */
+
 int is_prime_number(int n)
 {
-	if ((n <= 1) || ((n % 2) == 0))
+	int count = 0;
+
+	if (n <= 1)
 	{
 		return (0);
 	}
 
-	if (n == 2)
-	{
-		return (1);
-	}
-
-	for (int i = 3; i < n / 2; i += 2)
+	for (int i = 1; i <= n / 2; i++)
 	{
 		if ((n % i) == 0)
 		{
-			return (0);
+			count++;
 		}
 	}
 
-	return (1);
+	if (count > 1)
+		return (0);
+
+	else
+		return (1);
+
 }
