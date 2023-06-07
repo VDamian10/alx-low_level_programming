@@ -8,7 +8,7 @@
 
 int is_palindrome(char *s)
 {
-	int a, count = 0;
+	int a, i, count = 0;
 	int last;
 
 	if (!s)
@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 		return (0);
 	}
 
-	int i = 0;
+	i = 0;
 
 	while (s[i] != '\0')
 	{
