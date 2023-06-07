@@ -3,6 +3,7 @@
 /**
  * is_prime_number - entry
  * @n: number to check
+ *
  * Return: 1 if prime or 0 otherwise
 */
 
