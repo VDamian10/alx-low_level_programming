@@ -12,7 +12,7 @@ int check(char *str)
 {
 	if (*str == '-')
 		str++;
-	
+
 	for (int count = 0; str[count] != '\0'; count++)
 	{
 		if (str[count] < '0' || str[count] > '9')
