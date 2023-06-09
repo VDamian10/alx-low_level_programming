@@ -10,10 +10,12 @@
 */
 int check(char *str)
 {
+	int count;
+
 	if (*str == '-')
 		str++;
 
-	for (int count = 0; str[count] != '\0'; count++)
+	for (count = 0; str[count] != '\0'; count++)
 	{
 		if (str[count] < '0' || str[count] > '9')
 			return (0);
@@ -32,7 +34,7 @@ int check(char *str)
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int count, sum = 0;
 
 	if (argc < 2)
 	{
@@ -41,7 +43,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (int count = 1; count < argc; count++)
+	for (count = 1; count < argc; count++)
 	{
 		if (!check(argv[count]))
 		{
