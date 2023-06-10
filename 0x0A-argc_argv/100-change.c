@@ -10,6 +10,8 @@
 */
 int main(int argc, char *argv[])
 {
+	int result = 0, i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -25,28 +27,26 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	int totaL = 0;
-	
-	for (int i = 0; cents >= 0 && i < (sizeof(coins) / sizeof(coins[0])); i++)
+	int lowest = cents / coins[0], totaL = 0;
+
+	for (i = 0; cents > 0 && i < (sizeof(coins) / sizeof(coins[0])); i++)
 	{
-		if (cents / coins[i] < lowest)
-		{
-			lowest = cents / coins[i];
-			
-			int result = cents % coins[i];
-			
-			if (lowest == 1)
+			if (cents / coins[i] < lowest)
 			{
-				if (result != 0)
-				{
-					cents = result;
-					i = 0 - 1;
-					totalnumofl += lowest;
-					lowest = cents / coins[0];
-				}
+				lowest = cents / coins[i];
+				result = cents % coins[i];
 			}
-		}
+
+			if (i == sizeof(coins) / sizeof(coins[0]) && result != 0)
+			{
+				totaL += lowest;
+				cents = result;
+				lowest = cents / coins[0];
+				i = 0;
+			}
 	}
-	printf("%d\n", totalnumofl);
+	totaL += lowest;
+
+	printf("%d\n", totaL);
 	return (0);
 }
