@@ -12,7 +12,7 @@
 int checkwords(char *str)
 {
 	int i, count = 0;
-	
+
 	if (!str)
 		return (0);
 
