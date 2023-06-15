@@ -69,8 +69,7 @@ char **strtow(char *str)
 				return (NULL);
 			}
 
-			strncpy(strarray[x], &str[start], length);	/* copying into array element */
-			strarray[x][length] = '\0';
+			strarray[x] = strndup(&str[start], length);	/* copying into array element */
 			x++;
 		}
 	}
