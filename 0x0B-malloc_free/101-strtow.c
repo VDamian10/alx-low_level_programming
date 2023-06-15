@@ -14,7 +14,8 @@ int checkwords(char *str)
 	if (!str)
 		return (0);
 
-	int count = 0, i;
+	int count = 0;
+	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -40,7 +41,8 @@ char **strtow(char *str)
 	if (!str || *str == '\0')			/* checking if str is NULL or an empty space */
 		return (NULL);
 
-	int length, y, j, start, x = 0;
+	int length, y, j, start;
+	int x = 0;
 
 	char **strarray = malloc(sizeof(char *) * checkwords(str) + 1);
 
