@@ -43,7 +43,7 @@ char **strtow(char *str)
 	if (!str || *str == '\0')			/* checking if str is NULL or an empty space */
 		return (NULL);
 
-	strarray = malloc(sizeof(char *) * checkwords(str) + 1);
+	strarray = malloc(sizeof(char *) * (checkwords(str) + 1));
 
 	if (!strarray)
 		return (NULL);
@@ -58,7 +58,7 @@ char **strtow(char *str)
 				j++;
 
 			length = j - start;			/* determining length of the word to store */
-			strarray[x] = malloc(sizeof(char) * length + 1);
+			strarray[x] = malloc(sizeof(char) * (length + 1));
 
 			if (!strarray[x])
 			{
