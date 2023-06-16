@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *o;
 
-	o = malloc(sizeof(b));
+	o = malloc(sizeof b);
 
 	if (o == NULL)
 	{
