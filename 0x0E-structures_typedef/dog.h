@@ -1,11 +1,13 @@
 #ifndef DOG_H
 #define DOG_H
+
 /**
  * struct dog - entry point
  * @name: name of dog
  * @age: the age of the dog
  * @owner: owner of the dog
 */
+
 struct dog
 {
 	char *name;

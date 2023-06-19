@@ -1,8 +1,9 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 int str_len(char *s);
-char str_cpy(char *a, char *b);
+void str_cpy(char *a, char *b);
 
 /**
  * new_dog - creates a new dog type
@@ -13,8 +14,7 @@ char str_cpy(char *a, char *b);
  * Return: struct
 */
 
-/* creating a new dog */
-dog_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner) /* creating a new dog */
 {
 	dog_t *d;
 
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		str_cpy(name, d->name);
+		str_cpy(d->name, name);
 	}
 
 	else
@@ -52,7 +52,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		str_cpy(owner, d->owner);
+		str_cpy(d->owner, owner);
 	}
 
 	else
@@ -89,7 +89,7 @@ int str_len(char *s)
  *
  * Return: string
 */
-char str_cpy(char *a, char *b)
+void str_cpy(char *a, char *b)
 {
 	int i;
 
@@ -99,6 +99,5 @@ char str_cpy(char *a, char *b)
 	}
 
 	b[i] = '\0';
-	return (*b);
 }
 
