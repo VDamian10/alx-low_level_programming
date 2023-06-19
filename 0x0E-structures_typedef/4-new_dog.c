@@ -35,30 +35,27 @@ dog_t *new_dog(char *name, float age, char *owner) /* creating a new dog */
 			return (NULL);
 		}
 
-		str_cpy(d->name, name);
+		str_cpy(name, d->name);
 	}
 
 	else
-	{
 		d->name = NULL;
-	}
 
 	if (owner != NULL)
 	{
 		d->owner = malloc(sizeof(char) * (str_len(owner) + 1));
+
 		if (d->owner == NULL)
 		{
 			free(d->name);
 			return (NULL);
 		}
 
-		str_cpy(d->owner, owner);
+		str_cpy(owner, d->owner);
 	}
 
 	else
-	{
 		d->owner = NULL;
-	}
 
 	d->age = age;
 	return (d);
