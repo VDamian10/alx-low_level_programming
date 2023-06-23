@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list param;
-	char *nil= "(nil)", *str;
+	char *nil = "(nil)", *str;
 
 	if (!separator)
 		separator = "";
