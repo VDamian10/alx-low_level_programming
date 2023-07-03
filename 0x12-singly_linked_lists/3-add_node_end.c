@@ -69,18 +69,20 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = newnode;
 	}
 
-	trav = *head;
-	while (trav->next)
-		trav = trav->next;
+	else
+	{
+		trav = *head;
+		while (trav->next)
+			trav = trav->next;
 
-	newnode = malloc(sizeof(list_t));
-	if (!newnode)
-		return (NULL);
+		newnode = malloc(sizeof(list_t));
+		if (!newnode)
+			return (NULL);
 
-	newnode->str = cpme(str);
-	newnode->len = strlength(newnode->str);
-	newnode->next = NULL;
-	trav->next = newnode;
-
+		newnode->str = cpme(str);
+		newnode->len = strlength(newnode->str);
+		newnode->next = NULL;
+		trav->next = newnode;
+	}
 	return (newnode);
 }
