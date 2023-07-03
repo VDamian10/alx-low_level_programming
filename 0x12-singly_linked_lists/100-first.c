@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void __attribute__((constructor)) beforemain(void);
+
 /**
  * beforemain - prints a sentence before exe of main function
  * Return: nothing
