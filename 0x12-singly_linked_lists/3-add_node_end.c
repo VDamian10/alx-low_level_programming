@@ -67,6 +67,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		newnode->len = strlength(newnode->str);
 		newnode->next = NULL;
 		*head = newnode;
+		return (newnode);
 	}
 
 	else
@@ -83,6 +84,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		newnode->len = strlength(newnode->str);
 		newnode->next = NULL;
 		trav->next = newnode;
+		return (newnode);
 	}
-	return (newnode);
 }
