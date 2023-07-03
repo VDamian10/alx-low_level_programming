@@ -33,11 +33,11 @@ char *cpme(const char *str)
 		len++;
 	}
 
-	new = malloc(sizeof(char) * len);
+	new = malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
 
-	for (j = 0; str[j] != '\0'; j++)
+	for (j = 0; j < len; j++)
 	{
 		new[j] = str[j];
 	}

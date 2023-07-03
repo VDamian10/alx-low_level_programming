@@ -37,7 +37,7 @@ char *cpme(const char *str)
 	if (!new)
 		return (NULL);
 
-	for (j = 0; str[j] != '\0'; j++)
+	for (j = 0; j < len; j++)
 	{
 		new[j] = str[j];
 	}
