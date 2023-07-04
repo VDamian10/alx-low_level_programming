@@ -1,3 +1,1 @@
-This is my ALX Journey
-
-Month 01 - remastering my code 
+This is my ALX Journey to fullstack software engineer
