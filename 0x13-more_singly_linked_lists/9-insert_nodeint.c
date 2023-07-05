@@ -10,7 +10,7 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *newnode, *trav;
-	unsigned int key = 1;
+	unsigned int key = 0;
 
 	if (!*head)
 		return (NULL);
@@ -29,7 +29,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (newnode);
 	}
 	trav = *head;
-
 	while (trav)
 	{
 		if (key == idx - 1)
@@ -41,7 +40,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 		if (!trav->next)
 		{
-			free(newnode);
+			trav->next = newnode;
 			return (NULL);
 		}
 
