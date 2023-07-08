@@ -8,30 +8,9 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int rtp, j, bits = 0;
-	unsigned long int tmp;
-
-	if (n == 0)
-		_putchar('0');
-
-	tmp = n;
-	while (tmp)
+	if (n > 1)
 	{
-		tmp >>= 1;
-		bits++;
+		print_binary(n >> 1);
 	}
-
-	for (j = 1; j <= bits; j++)
-	{
-		rtp = 1 << (bits - j);
-
-		if (n & rtp)
-		{
-			_putchar('1');
-			n -= rtp;
-		}
-		else
-			_putchar('0');
-	}
-	_putchar('\n');
+	_putchar(n & 1 ? '1' : '0');
 }
