@@ -1,4 +1,4 @@
-#include "proto.h"
+#include "main.h"
 
 /**
  * binary_to_uint - converts a biary number to unsigned int
