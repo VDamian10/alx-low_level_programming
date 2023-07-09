@@ -33,5 +33,9 @@ int get_bit(unsigned long int n, unsigned int index)
 
 		count++;
 	}
-	return (0);
+
+	if (index > bits - 1)
+		return (0);
+
+	return (-1);
 }
