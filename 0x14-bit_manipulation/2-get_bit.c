@@ -4,7 +4,7 @@
  * get_bit - retrieves the bit value at index
  * @n: input number
  * @index: index to get bit value
- * Return: bit value
+ * Return: bit value or -1
 */
 
 int get_bit(unsigned long int n, unsigned int index)
@@ -31,10 +31,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (index == count)
 			return ((n & rtp) ? 1 : 0);
 
-		if (count > bits - 1)
-			return (0);
-
 		count++;
 	}
-	return (-1);
+	return (0);
 }
