@@ -31,11 +31,10 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (index == count)
 			return ((n & rtp) ? 1 : 0);
 
+		if (index > bits - 1)
+			return (0);
+
 		count++;
 	}
-
-	if (index > bits - 1)
-		return (0);
-
 	return (-1);
 }
