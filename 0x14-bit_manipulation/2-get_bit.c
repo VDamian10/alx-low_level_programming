@@ -23,9 +23,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		bits++;
 	}
 
-	if (index > bits - 1)
-		return (0);
-
 	count = 0;
 	for (i = bits - 1; i >= 0; i--)
 	{
