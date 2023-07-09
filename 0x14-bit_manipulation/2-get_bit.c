@@ -29,7 +29,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		rtp = 1 << (bits - i - 1);
 
 		if (index == count)
-			return (n & rtp ? 1 : 0);
+			return ((n & rtp) ? 1 : 0);
 
 		count++;
 	}
