@@ -20,6 +20,12 @@ int get_bit(unsigned long int n, unsigned int index)
 		bits++;
 	}
 
+	/* printf("The value of index here is: %u\n", index); */
+	/* printf("The value of bits here is: %u\n", bits); */
+
+	if (index > 63)
+		return (-1);
+
 	if (index > bits)
 		return (0);
 
