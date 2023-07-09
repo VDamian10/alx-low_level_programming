@@ -13,7 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int rtp, count, bits = 0;
 	int i;
 
-	if (n == 0)
+	if (n == 0 || n > 63)
 		return (-1);
 
 	tmp = n;
@@ -27,7 +27,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	for (i = bits - 1; i >= 0; i--)
 	{
 		rtp = 1 << (bits - i - 1);
-
 		if (index == count)
 			return ((n & rtp) ? 1 : 0);
 
