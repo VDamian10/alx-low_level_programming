@@ -10,8 +10,8 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int tmp;
-	unsigned int j, rtp, bits = 0;
-	int i, count;
+	unsigned int rtp, count, bits = 0;
+	int i;
 
 	if (n == 0)
 		return (-1);
