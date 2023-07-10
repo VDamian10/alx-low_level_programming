@@ -17,7 +17,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 
 	tmp = n;
-	while (tmp)
+	while (*tmp)
 	{
 		*tmp >>= 1;
 		bits++;
@@ -35,9 +35,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 		rtp = 1 << (bits - i - 1);
 
 		if (index == count)
-		{
 			*n = (*n | rtp);
-		}
+
 		count++;
 	}
 	return (1);
