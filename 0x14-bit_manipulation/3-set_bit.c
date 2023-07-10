@@ -9,35 +9,17 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int *tmp, rtp;
-	unsigned int count, bits = 0;
-	int i;
+	unsigned long int rtp;
 
 	if (!n)
 		return (-1);
 
-	tmp = n;
-	while (*tmp)
-	{
-		*tmp >>= 1;
-		bits++;
-	}
-
-	if (index > 63)
+	if (index > sizeof(unsigned long int) * 8 - 1)
 		return (-1);
 
-	if (index > bits)
-		return (-1);
+	rtp = 1 << index;
 
-	count = 0;
-	for (i = bits - 1; i >= 0; i--)
-	{
-		rtp = 1 << (bits - i - 1);
+	*n = *n | rtp;
 
-		if (index == count)
-			*n = (*n | rtp);
-
-		count++;
-	}
 	return (1);
 }
