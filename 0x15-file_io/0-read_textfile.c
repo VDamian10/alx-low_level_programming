@@ -28,7 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (readme == -1)
 		return (0);
 
-	writeme = write(fd, buff, letters);
+	writeme = write(STDOUT_FILENO, buff, readme);
+	if (writeme != readme)
+		return (0);
 
 	free(buff);
 	close(fd);
