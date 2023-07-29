@@ -9,42 +9,45 @@
 */
 void print_times_table(int n)
 {
-	int num1, num2, answer;
-
 	if (n >= 0 && n <= 15)
 	{
-		for (num1 = 0; num1 <= n; num1++)
+		for (int i = 0; i <= n; i++)
 		{
 			_putchar('0');
-
-			for (num2 = 1; num2 <= n; num2++)
+			
+			for (int j = 1; j <= n; j++)
 			{
-				answer = num1 * num2;
+				int fig = i * j;
 
-				_putchar(',');
-				_putchar(' ');
-
-				if (answer <= 9 || answer <= 99)
+				if (fig >= 0 && fig <= 9)
 				{
+					_putchar(',');
 					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(fig + '0');
 				}
 
-				else if (answer >= 10 && answer <= 99)
+				if (fig > 9 && fig <= 99)
 				{
-					_putchar((answer / 10) + '0');
-					_putchar((answer % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(((fig / 10) % 10) + '0');
+					_putchar((fig % 10) + '0');
 				}
 
-				else
+				if (fig > 99 && fig < 1000)
 				{
-					if (answer >= 100)
-					{
-						_putchar((answer / 100) + '0');
-						_putchar(((answer / 10) % 10) + '0');
-						_putchar((answer % 10) + '0');
-					}
+					_putchar(',');
+					_putchar(' ');
+					_putchar(((fig / 100) % 10) + '0');
+					_putchar(((fig / 10) % 10) + '0');
+					_putchar((fig % 10) + '0');
 				}
 			}
+
+
 			_putchar('\n');
 		}
 	}
