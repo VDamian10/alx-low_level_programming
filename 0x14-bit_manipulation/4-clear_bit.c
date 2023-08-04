@@ -14,7 +14,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (!n)
 		return (-1);
 
-	rtp = 1 << index;
+	rtp = 1UL << index;
 
 	*n = *n & rtp;
 
