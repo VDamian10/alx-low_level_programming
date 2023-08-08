@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 	while ((readme = read(cp1, buffer, 1024)) > 0)
 	{
 		writeme = write(cp2, buffer, readme);
-		if (writeme == -1)
+		if (writeme == -1 || cp2 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
