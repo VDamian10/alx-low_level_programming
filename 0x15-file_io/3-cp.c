@@ -8,12 +8,7 @@
 
 void closeme(int x)
 {
-	int closed;
-
-	if (x > 0)
-		closed = close(x);
-
-	if (closed == -1)
+	if (close(x) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", x);
 		exit(100);
